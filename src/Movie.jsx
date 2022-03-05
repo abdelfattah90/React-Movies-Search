@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import MovieCard from './MovieCard'
 import SearchIcon from './search.svg'
 import './Movie.css'
@@ -8,7 +8,7 @@ const Movie = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [movies, setMovies] = useState([])
 
-  useEffect(() => {
+  useState(() => {
     searchMovies('')
   }, [])
 
