@@ -15,13 +15,12 @@ const Movie = () => {
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`)
     const data = await response.json()
-
     setMovies(data.Search)
   }
 
   return (
     <div className='app'>
-      <h1 className='movie-title'>{process.env.SECRET_KEY}MovieLand</h1>
+      <h1 className='movie-title'>MovieLand</h1>
 
       <div className='search'>
         <input
