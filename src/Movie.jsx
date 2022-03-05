@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
-
 import MovieCard from './MovieCard'
 import SearchIcon from './search.svg'
 import './Movie.css'
 
-const API_URL = 'http://www.omdbapi.com?apikey=b6003d8a'
-
+const API_URL = process.env.REACT_APP_MOVIE_URL
 const Movie = () => {
+  console.log(process.env)
   const [searchTerm, setSearchTerm] = useState('')
   const [movies, setMovies] = useState([])
 
@@ -23,7 +22,7 @@ const Movie = () => {
 
   return (
     <div className='app'>
-      <h1 className='movie-title'>MovieLand</h1>
+      <h1 className='movie-title'>{process.env.SECRET_KEY}MovieLand</h1>
 
       <div className='search'>
         <input
