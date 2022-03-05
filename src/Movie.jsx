@@ -5,7 +5,6 @@ import './Movie.css'
 
 const API_URL = process.env.REACT_APP_MOVIE_URL
 const Movie = () => {
-  console.log(process.env)
   const [searchTerm, setSearchTerm] = useState('')
   const [movies, setMovies] = useState([])
 
